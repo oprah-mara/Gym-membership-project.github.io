@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul class="nav-list-left">
+            <li>ECHO Gym</li>
+        </ul>
+
+        <ul class="nav-list-right">
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="Membership.html">Membership</a></li>
+            <li><a href="creative.html">Creativity</a></li>
+        </ul>
+    </nav> 
+
+    <!-- Forms -->
+    <div class="signup-form">
+        <div class="form-container">
+            <h2>Ready to Join ECHO?</h2>
+            <p>Fill out the form below to get started.</p>
+            
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="plan">Select Membership Plan</label>
+                    <select id="plan" required>
+                        <option value="">Choose a plan</option>
+                        <option value="basic">Basic ($29/month)</option>
+                        <option value="standard">Standard ($49/month)</option>
+                        <option value="premium">Premium ($79/month)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Sign Up Now</button>
+                <div id="popup">
+                    <p id="popupText"></p>
+                    <button id="closeBtn" onclick="closePopup()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24176.412578913324!2d-74.0060157!3d40.7127281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQyJzQ1LjgiTiA3NMKwMDAnMzcuNSJX!5e0!3m2!1sen!2sus!4v1651337011111!5m2!1sen!2sus"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Opening Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 5am - 11pm</li>
+                    <li>Saturday: 7am - 9pm</li>
+                    <li>Sunday: 8am - 8pm</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>2421 Street</li>
+                    <li>Gym, 11691</li>
+                    <li>Phone: (555) 123-4567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; coded by Amarachi</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+  document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const plan = document.getElementById("plan").value;
+    const phone = document.getElementById("phone").value.trim();
+    const phoneRegex = /^\d{10}$/;
+
+    if (name && plan) {
+      document.getElementById("popupText").innerText = `Welcome to Echo Gym ${name}, you selected the ${plan} plan.`;
+      document.getElementById("popup").style.display = "block";
+      this.reset(); 
+    } else {
+      alert("Please enter your name and select a plan.");
+    }
+  });
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+</body>
+
+</html>

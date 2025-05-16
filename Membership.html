@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Membership</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="membership.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+   <nav class="nav-bar">
+        <ul class="nav-list-left">
+            <li>ECHO Gym</li>
+        </ul>
+
+        <ul class="nav-list-right">
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="Membership.html">Membership</a></li>
+            <li><a href="creative.html">Creativity</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Choose Your Membership Plan</h1>
+        <p>Find the perfect plan to fit your fitness goals and budget.</p>
+        
+        <div class="membership-plans">
+            <div class="plan">
+                <h3>Basic</h3>
+                <div class="price">$29/month</div>
+                <ul class="features">
+                    <li>Access to gym facilities</li>
+                    <li>Open 6am-10pm</li>
+                    <li>Locker room access</li>
+                    <li>Free Wi-Fi</li>
+                </ul>
+                <button id="basicBtn" class="btn">Select Plan</button>
+            </div>
+            
+            <div class="plan">
+                <h3>Standard</h3>
+                <div class="price">$49/month</div>
+                <ul class="features">
+                    <li>All Basic benefits</li>
+                    <li>Unlimited group classes</li>
+                    <li>24/7 access</li>
+                    <li>1 free personal training session</li>
+                </ul>
+                <button id="standardBtn" class="btn">Select Plan</button>
+            </div>
+            
+            <div class="plan">
+                <h3>Premium</h3>
+                <div class="price">$79/month</div>
+                <ul class="features">
+                    <li>All Standard benefits</li>
+                    <li>4 personal training sessions</li>
+                    <li>Towel service</li>
+                    <li>Sauna access</li>
+                    <li>Nutrition consultation</li>
+                </ul>
+                <button  id="premiumBtn" class="btn">Select Plan</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Monday - Friday: 5am - 11pm</li>
+                        <li>Saturday: 7am - 9pm</li>
+                        <li>Sunday: 8am - 8pm</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>2421 Street</li>
+                        <li>Gym, 11691</li>
+                        <li>Phone: (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; coded by Amarachi</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+  // Get each button by ID
+  document.getElementById("basicBtn").addEventListener("click", function() {
+    window.location.href = "creative.html";
+  });
+
+  document.getElementById("standardBtn").addEventListener("click", function() {
+    window.location.href = "creative.html";
+  });
+
+  document.getElementById("premiumBtn").addEventListener("click", function() {
+    window.location.href = "creative.html";
+  });
+</script>
+
+
+</html>
