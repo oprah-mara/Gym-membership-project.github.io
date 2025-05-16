@@ -60,11 +60,17 @@
                 </div>
             </form>
         </div>
+        <!-- slideshow -->
+        <div class="slideshow-container">
+            <img class="slide" src="https://hips.hearstapps.com/hmg-prod/images/lead-main-img-677ef043a81cd.jpg?crop=1.00xw:0.886xh;0,0.00568xh&resize=1200:*" alt="Workout 1">
+            <img class="slide" src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1364493480-681a68ac6bae8.jpg?resize=1200:*" alt="Workout 2">
+            <img class="slide" src="https://www.staywithstylescottsdale.com/wp-content/uploads/2024/03/Featured-Image-Scottsdale-Gyms.jpg" alt="Workout 3">
+        </div>
     </div>
    
     <div class="map-container">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24176.412578913324!2d-74.0060157!3d40.7127281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQyJzQ1LjgiTiA3NMKwMDAnMzcuNSJX!5e0!3m2!1sen!2sus!4v1651337011111!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.294905350656!2d-73.98817028459481!3d40.69553287933407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a432e74d2ef%3A0x383c84b58c4aa1a0!2sNew%20York%20City%20College%20of%20Technology!5e0!3m2!1sen!2sus!4v1715875798251!5m2!1sen!2sus"
             width="100%"
             height="400"
             style="border:0;"
@@ -73,6 +79,7 @@
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
+
 
 
 <footer>
@@ -122,6 +129,27 @@
   function closePopup() {
     document.getElementById("popup").style.display = "none";
   }
+
+//   Slideshow 
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlide(index) {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[index].style.display = "block";
+}
+
+function autoSlide() {
+  slideIndex++;
+  if (slideIndex >= slides.length) slideIndex = 0;
+  showSlide(slideIndex);
+  setTimeout(autoSlide, 3000); // Change every 3 seconds
+}
+showSlide(slideIndex);
+autoSlide();
+
 </script>
 </body>
 

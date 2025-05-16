@@ -6,7 +6,6 @@
     <title> Membership</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="membership.css">
-    <!-- <script src="script.js"></script> -->
 </head>
 <body>
    <nav class="nav-bar">
@@ -25,7 +24,13 @@
     <div class="main-content">
         <h1>Choose Your Membership Plan</h1>
         <p>Find the perfect plan to fit your fitness goals and budget.</p>
-        
+        <!-- slideshow -->
+        <div class="slideshow-container">
+            <img class="slide" src="https://www.staywithstylescottsdale.com/wp-content/uploads/2024/03/Featured-Image-Scottsdale-Gyms.jpg" alt="Workout 3">
+            <img class="slide" src="https://hips.hearstapps.com/hmg-prod/images/lead-main-img-677ef043a81cd.jpg?crop=1.00xw:0.886xh;0,0.00568xh&resize=1200:*" alt="Workout 1">
+            <img class="slide" src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1364493480-681a68ac6bae8.jpg?resize=1200:*" alt="Workout 2">
+        </div>
+
         <div class="membership-plans">
             <div class="plan">
                 <h3>Basic</h3>
@@ -90,21 +95,38 @@
             </div>
         </div>
     </footer>
+    <script>
+        //   Slideshow 
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        function showSlide(index) {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[index].style.display = "block";
+        }
+
+        function autoSlide() {
+        slideIndex++;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        showSlide(slideIndex);
+        setTimeout(autoSlide, 3000); // Change every 3 seconds
+        }
+        showSlide(slideIndex);
+        autoSlide();
+
+        document.getElementById("basicBtn").addEventListener("click", function() {
+            window.location.href = "creative.html";
+        });
+
+        document.getElementById("standardBtn").addEventListener("click", function() {
+            window.location.href = "creative.html";
+        });
+
+        document.getElementById("premiumBtn").addEventListener("click", function() {
+            window.location.href = "creative.html";
+        });
+    </script>
 </body>
-<script>
-  // Get each button by ID
-  document.getElementById("basicBtn").addEventListener("click", function() {
-    window.location.href = "creative.html";
-  });
-
-  document.getElementById("standardBtn").addEventListener("click", function() {
-    window.location.href = "creative.html";
-  });
-
-  document.getElementById("premiumBtn").addEventListener("click", function() {
-    window.location.href = "creative.html";
-  });
-</script>
-
-
 </html>
